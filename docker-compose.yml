@@ -1,0 +1,11 @@
+services:
+  ocr:
+    build: .
+    image: captcha-ocr:latest
+    container_name: captcha-ocr
+    ports:
+      - "8765:8765"
+    environment:
+      - TTA=0          # set 1 to enable test-time augmentation
+      - OMP_NUM_THREADS=4
+    restart: unless-stopped

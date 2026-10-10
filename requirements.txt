@@ -1,0 +1,8 @@
+# CPU-only PyTorch (keeps the image small, runs anywhere).
+# For a GPU image instead, use:  torch==2.6.0  torchvision==0.21.0
+#   with --extra-index-url https://download.pytorch.org/whl/cu124  and an nvidia/cuda base.
+--extra-index-url https://download.pytorch.org/whl/cpu
+torch==2.6.0+cpu
+torchvision==0.21.0+cpu
+pillow
+numpy
